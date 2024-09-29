@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #282c34; /* Dark background */
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+#mode-selection {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background-color: #222; /* Dark grid background */
+    border: 2px solid #00f; /* Neon blue border */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border 0.3s ease; /* Smooth transition */
+    box-shadow: 0 0 10px #00f, 0 0 20px #00f; /* Neon glow effect */
+}
+
+.cell:hover {
+    background-color: #444; /* Slightly lighter background on hover */
+    border: 2px solid #0ff; /* Cyan border on hover */
+    box-shadow: 0 0 20px #0ff, 0 0 30px #0ff; /* Cyan glow on hover */
+}
+
+.clicked.X {
+    color: #00f; /* Neon blue color */
+    text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f; /* Glow effect for X */
+    animation: pulse 0.5s;
+}
+
+.clicked.O {
+    color: #ff0; /* Neon yellow for O */
+    text-shadow: 0 0 10px #ff0, 0 0 20px #ff0, 0 0 30px #ff0; /* Glow effect for O */
+    animation: pulse 0.5s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+h1, h2 {
+    margin: 0;
+    text-shadow: 0 0 10px #00f, 0 0 20px #00f; /* Neon glow for text */
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1rem;
+    background-color: #555; /* Dark button background */
+    color: white;
+    border: 2px solid #00f; /* Neon blue border */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border 0.3s ease; /* Smooth transition */
+    box-shadow: 0 0 10px #00f, 0 0 20px #00f; /* Neon glow effect */
+}
+
+button:hover {
+    background-color: #666; /* Slightly lighter button background on hover */
+    border: 2px solid #0ff; /* Cyan border on hover */
+    box-shadow: 0 0 20px #0ff, 0 0 30px #0ff; /* Cyan glow on hover */
+}
